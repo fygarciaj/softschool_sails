@@ -29,6 +29,8 @@ module.exports = function (grunt) {
    */
 
   var cssFilesToInject = [
+    'linker/styles/bootstrap.css',
+    'linker/styles/bootstrap-theme.css',
     'linker/**/*.css'
   ];
 
@@ -57,6 +59,8 @@ module.exports = function (grunt) {
     'linker/js/app.js',
 
     // *->    put other dependencies here   <-*
+    'linker/js/jquery.js',
+    'linker/js/bootstrap.js',
 
     // All of the rest of your app scripts imported here
     'linker/**/*.js'
@@ -147,6 +151,23 @@ module.exports = function (grunt) {
           src: ['**/*.!(coffee)'],
           dest: '.tmp/public'
         }
+        ]
+      },
+      prod: {
+        files: [
+          {
+            expand: true,
+            cwd: './assets',
+            src: ['**/*.!(coffee)', '!**/fonts/**'],
+            dest: '.tmp/public'
+          },
+          {
+            expand: true,
+            flatten: true,
+            cwd: './assets',
+            src: ['**/fonts/*'],
+            dest: '.tmp/public/fonts/'
+          }
         ]
       },
       build: {
@@ -421,8 +442,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('compileAssets', [
     'clean:dev',
-    'jst:dev',
-    'less:dev',
+    // 'jst:dev',
+   // 'less:dev',
     'copy:dev',    
     'coffee:dev'
   ]);

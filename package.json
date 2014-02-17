@@ -1,8 +1,8 @@
 {
-  "name": "test",
+  "name": "softschool_sails",
   "private": true,
   "version": "0.0.0",
-  "description": "a Sails application",
+  "description": "Aplicación de un colegio",
   "dependencies": {
     "sails": "0.9.8",
     "grunt": "0.4.1",
@@ -10,14 +10,24 @@
     "optimist": "0.3.4",
     "sails-mysql": "~0.9.9",
     "sails-mongo": "~0.9.7",
-    "bcrypt": "~0.7.7"
+    "bcrypt": "~0.7.7",
+    "n": "~1.2.1",
+    "bcryptjs": "~0.7.10",
+    "passport": "~0.2.0",
+    "passport-local": "~0.1.6",
+    "passport-twitter": "~1.0.2",
+    "passport-github": "~0.1.5",
+    "passport-facebook": "~1.0.2"
   },
   "scripts": {
     "start": "node app.js",
     "debug": "node debug app.js"
   },
   "main": "app.js",
-  "repository": "",
-  "author": "",
-  "license": ""
+  "repository": "fygarciaj",
+  "author": "Fabian Garcia",
+  "license": "GPL v.3",
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  }
 }

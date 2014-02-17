@@ -1,0 +1,34 @@
+<ol class="breadcrumb">
+	<li><a href="/"><%= __('Home') %></a></li>
+	<li><a href="/user"><%= __('Users') %></a></li>
+	<li class="active"><%= __('Auth user') %></li>
+</ol>
+<form role="form" action="/user/login" method="POST" class="form-center">
+	<h2 class="form-signin-heading"><%= __('Auth user') %></h2>
+	<div class="form-group">
+		<label for="username"><%= __('%s or %s', __('Username'), __('Email')) %></label>
+		<input type="text" class="form-control" placeholder="<%= __('someone@somewhere.com') %>" name="username" id="username" required />
+	</div>
+	<div class="form-group">
+		<label for="password"><%= __('Password') %></label>
+		<input type="password" class="form-control" placeholder="<%= __('Password') %>" name="password" id="password" required minlength="6" />
+	</div>
+	<p><input type="submit" class="btn btn-primary btn-block" value="<%= __('Auth user') %>" /></p>
+</form>
+<% if ( sails.config.providers ) { %>
+<div class="form-center">
+	<p class="text-center"><%= __('or Auth with...') %><p>
+	<div class="row">
+		<% _.each(sails.config.providers, function(provider, provider_id){ %>
+		<form role="form" action="/user/login/<%= provider_id %>" method="POST" class="col-xs-4">
+			<p>
+				<button type="submit" class="btn btn-primary btn-block">
+					<!--span class="glyphicon glyphicon-<%= provider_id %>"></span-->
+					<%= __(provider_id) %>
+				</button>
+			</p>
+		</form>
+		<% }) %>
+	</div>
+</div>
+<% } %>
