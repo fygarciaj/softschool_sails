@@ -1,3 +1,22 @@
 {
-  "Welcome": "Bienvenido"
+  "Welcome": "Bienvenido",
+  "or Auth with...": "o autenticar con ...",
+  "Password": "Contraseña",
+  "Username or Email": "Nombre de Usuario o Email",
+  "Create user": "Crear usuario",
+  "Log In": "Iniciar Sessión",
+  "Username": "Nombre de Usuario",
+  "Sing Up": "Registrar",
+  "Sign out": "Cerrar Sessión",
+  "Home": "Inicio",
+  "Users": "Usuarios",
+  "Auth user": "Autenticar Usuario",
+  "Edit": "Editar",
+  "Old password": "Contraseña Anterior",
+  "New password": "Nueva Contraseña",
+  "Confirm password": "Confirmar la Contraseña",
+  "Update account": "Cuenta Actualizada",
+  "Edit account": "Editar Cuenta",
+  "Delete": "Borrar",
+  "someone@somewhere.com": "email@dominio.com"
 }
